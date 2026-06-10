@@ -73,3 +73,39 @@ def guardar_paises(paises):
         for pais in paises:
             f.write(f"{pais['nombre']},{pais['poblacion']},{pais['superficie']},{pais['continente']}\n")
 
+def actualizar_datos(paises):
+    nombre = input("Ingrese el nombre de un pais que este en la lista: ")
+    for pais in paises:
+        if pais["nombre"] == nombre:            
+            print("Pais encontrado")
+
+            try:
+                poblacion = int(input("Ingrese la nueva poblacion: "))
+                if poblacion <= 0:
+                    print("Error: la población debe ser mayor a cero.")
+                    return
+            except ValueError:
+                print("Error: la población debe ser un número entero.")
+                return
+            
+            try:
+                superficie = int(input("Ingrese la nueva superficie: "))
+                if superficie <=0:
+                    print("Error: La superficie debe ser un numero mayor a cero.")
+                    return
+            except ValueError:
+                print("Error: la superficie debe ser un número entero.")
+                return
+            
+            pais["poblacion"] = poblacion
+            pais["superficie"] = superficie 
+
+            guardar_paises(paises)
+            print("País actualizado correctamente.")
+            return
+        
+    print("Pais no encontrado")
+
+
+    
+

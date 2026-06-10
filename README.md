@@ -42,8 +42,13 @@ El programa muestra un menú con las siguientes opciones:
 3. Filtrar por continente
 4. Filtrar por población
 5. Filtrar por superficie
-6. Mostrar estadísticas
-7. Salir
+6. Ordenar por nombre
+7. Ordenar por población
+8. Ordenar por superficie
+9. Actualizar país
+10. Mostrar estadísticas
+11. Salir
+
 =======================================
 Seleccione una opción: 2
 Ingrese el nombre a buscar: arg
@@ -51,7 +56,7 @@ Ingrese el nombre a buscar: arg
 ```
 
 ```
-Seleccione una opción: 6
+Seleccione una opción: 10
 
 ===== ESTADÍSTICAS =====
 País con mayor población: China

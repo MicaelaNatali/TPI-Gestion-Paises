@@ -10,7 +10,11 @@ def mostrar_menu():
     print("3. Filtrar por continente")
     print("4. Filtrar por población")
     print("5. Filtrar por superficie")
-    print("6. Mostrar estadísticas")
+    print("6. Ordenar por nombre")
+    print("7. Ordenar por población")
+    print("8. Ordenar por superficie")
+    print("9. Actualizar país")
+    print("10. Mostrar estadísticas")
     print("7. Salir")
     print("=======================================")
 

@@ -15,7 +15,7 @@ def mostrar_menu():
     print("8. Ordenar por superficie")
     print("9. Actualizar país")
     print("10. Mostrar estadísticas")
-    print("7. Salir")
+    print("11. Salir")
     print("=======================================")
 
 

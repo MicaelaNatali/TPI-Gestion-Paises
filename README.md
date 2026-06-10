@@ -26,8 +26,12 @@ El programa muestra un menú con las siguientes opciones:
 3. **Filtrar por continente**: muestra todos los países de un continente dado.
 4. **Filtrar por población**: muestra países dentro de un rango de población.
 5. **Filtrar por superficie**: muestra países dentro de un rango de superficie.
-6. **Mostrar estadísticas**: muestra país con mayor y menor población, promedio de población y superficie, y cantidad de países por continente.
-7. **Salir**: finaliza el programa.
+6. **Ordenar países por nombre**: ordena y muestra países en orden alfabético.
+7. **Ordenar países por población**: ordena y muestra los países de menor a mayor población.
+8. **Ordenar países por superficie**: ordena y muestra los países de menor a mayor superficie.
+9. **Actualizar información de un país**: permite modificar la población y superficie de un país en específico.
+10. **Mostrar estadísticas**: muestra país con mayor y menor población, promedio de población y superficie, y cantidad de países por continente.
+11. **Salir**: finaliza el programa.
 
 ## Ejemplo de entrada/salida
 

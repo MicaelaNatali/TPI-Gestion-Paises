@@ -31,11 +31,11 @@ def filtrar_superficie(paises):
             print(pais)
 
 def actualizar_pais(paises):
-    nombre= input("Ingrese el nombre del país a actualizar:"). lower()
+    nombre = input("Ingrese el nombre del país a actualizar:"). lower()
     for pais in paises:
         if pais["nombre"].lower() == nombre:
             pais["poblacion"] = int(input("Nueva población:"))
-            pais["superficie"] = int(input("Nueva superficie:")
+            pais["superficie"] = int(input("Nueva superficie:"))
             print("País actualizado correctamente.")
             return
     print("País no encontrado.")
@@ -47,8 +47,8 @@ def ordenar_nombre(paises):
                 aux = paises [i]
                 paises [i] = paises [j]
                 paises [j] = aux
-        for pais in paises:
-            print(pais)
+    for pais in paises:
+        print(pais)
 
 def ordenar_poblacion(paises):
     for i in range(len(paises)):

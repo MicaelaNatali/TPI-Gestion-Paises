@@ -76,3 +76,8 @@ Abrate Pilar: Desarrollo de datos.py (carga, guardado, alta y actualización de 
 Micaela Natali Villanueva: Desarrollo de consultas.py (búsqueda y filtros), estadisticas.py (cálculo de estadísticas) y main.py (menú principal).
 
 Ambos integrantes participaron en la definición conjunta de la estructura de datos (diccionario de país), pruebas del programa y elaboración del informe.
+
+## Documentación y video
+
+Documentación PDF: 
+Video demostrativo:

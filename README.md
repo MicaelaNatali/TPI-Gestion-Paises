@@ -1,10 +1,10 @@
-# TPI-Gestion-Paises
+# TPI - Gestión de Datos de Países en Python
 
 Trabajo Práctico Integrador de Programación 1 - Tecnicatura Universitaria en Programación a Distancia.
 
 ## Descripción
 
-Aplicación desarrollada en Python que permite gestionar información sobre países (nombre, población, superficie y continente), utilizando listas, diccionarios, funciones, estructuras condicionales y repetitivas. Los datos se almacenan en un archivo CSV y el sistema debe permitir agregar países, realizar búsquedas, aplicar filtros y obtener estadísticas.
+Desarrollamos una aplicacion en Python que permite gestionar información sobre países (nombre, población, superficie y continente), utilizando listas, diccionarios, funciones, estructuras condicionales y repetitivas. Los datos se almacenan en un archivo CSV y el sistema debe permitir agregar países, realizar búsquedas, aplicar filtros y obtener estadísticas.
 
 ## Estructura del proyecto
 

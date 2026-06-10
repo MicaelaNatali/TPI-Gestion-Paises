@@ -1,5 +1,5 @@
 from datos import cargar_paises, agregar_pais
-from consultas import (buscar_pais, filtrar_continente, filtrar_poblacion, filtrar_superficie)
+from consultas import (buscar_pais, filtrar_continente, filtrar_poblacion, filtrar_superficie, actualizar_pais, ordenar_nombre, ordenar_poblacion, ordenar_superficie)
 from estadisticas import mostrar_estadisticas
 
 
@@ -45,10 +45,22 @@ def main():
             filtrar_superficie(paises)
 
         elif opcion == "6":
-            mostrar_estadisticas(paises)
+            ordenar_nombre(paises)
 
         elif opcion == "7":
-            print("Programa finalizado.")
+            ordenar_poblacion(paises)
+
+        elif opcion == "8":
+            ordenar_superficie(paises)
+
+        elif opcion == "9":
+            actualizar_pais(paises)
+
+        elif opcion == "10":
+            mostrar_estadisticas(paises)
+
+        elif opcion == "11":
+            print ("Programa finalizado.")
             break
 
         else:

@@ -14,13 +14,21 @@ def buscar_pais(paises):
 
 def filtrar_continente(paises):
     continente = input ("Ingrese continente:").lower()
+    encontrados = False
     for pais in paises:
             if pais ["continente"].lower() == continente:
                 print(pais)
+                encontrados = True
+    if not encontrados:
+        print("No se encontraron países en ese continente.")
 
 def filtrar_poblacion(paises):
-    minimo = int(input("Población mínima:"))
-    maximo = int(input("Población máxima:"))
+    try:
+        minimo = int(input("Población mínima:"))
+        maximo = int(input("Población máxima:"))
+    except ValueError:
+        print("Error: debe ingresar números enteros.")
+        return
     encontrados = False
     for pais in paises:
         if minimo <= int(pais["poblacion"]) <= maximo:
@@ -30,8 +38,12 @@ def filtrar_poblacion(paises):
         print("No se encontraron países en ese rango.")
 
 def filtrar_superficie(paises):
-    minimo = int(input("Superficie mínima:"))
-    maximo = int(input("Superficie máxima:"))
+    try:
+        minimo = int(input("Superficie mínima:"))
+        maximo = int(input("Superficie máxima:"))
+    except ValueError:
+        print("Error: debe ingresar números enteros.")
+        return
     encontrados = False
     for pais in paises:
         if minimo <= int(pais ["superficie"]) <=maximo:
@@ -44,7 +56,7 @@ def actualizar_pais(paises):
     nombre = input("Ingrese el nombre del país a actualizar:"). lower()
     for pais in paises:
         if pais["nombre"].lower() == nombre:
-             try:
+            try:
                 poblacion = int(input("Nueva población:"))
                 if poblacion <= 0:
                     print("Error: la población debe ser mayor a cero.")

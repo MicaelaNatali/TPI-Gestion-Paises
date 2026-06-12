@@ -19,16 +19,24 @@ def filtrar_continente(paises):
 def filtrar_poblacion(paises):
     minimo = int(input("Población mínima:"))
     maximo = int(input("Población máxima:"))
+    encontrados = False
     for pais in paises:
         if minimo <= int(pais["poblacion"]) <= maximo:
             print(pais)
+            encontrados = True
+    if not encontrados:
+        print("No se encontraron países en ese rango.")
 
 def filtrar_superficie(paises):
     minimo = int(input("Superficie mínima:"))
     maximo = int(input("Superficie máxima:"))
+    encontrados = False
     for pais in paises:
         if minimo <= int(pais ["superficie"]) <=maximo:
             print(pais)
+            encontrados = True
+    if not encontrados:
+        print("No se encontraron países en ese rango.")
 
 def actualizar_pais(paises):
     nombre = input("Ingrese el nombre del país a actualizar:"). lower()

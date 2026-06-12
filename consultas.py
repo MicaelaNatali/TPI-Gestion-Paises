@@ -1,3 +1,5 @@
+from datos import guardar_paises
+
 def buscar_pais(paises):
     nombre = input ("Ingrese el nombre a buscar:"). lower()
     encontrados = []
@@ -42,8 +44,24 @@ def actualizar_pais(paises):
     nombre = input("Ingrese el nombre del país a actualizar:"). lower()
     for pais in paises:
         if pais["nombre"].lower() == nombre:
-            pais["poblacion"] = int(input("Nueva población:"))
-            pais["superficie"] = int(input("Nueva superficie:"))
+             try:
+                poblacion = int(input("Nueva población:"))
+                if poblacion <= 0:
+                    print("Error: la población debe ser mayor a cero.")
+                    return
+            except ValueError:
+                print("Error: la población debe ser un número entero.")
+                return
+            try:
+                superficie = int(input("Nueva superficie:"))
+                if superficie <= 0:
+                    print("Error: la superficie debe ser mayor a cero.")
+                    return
+            except ValueError:
+                print("Error: la superficie debe ser un número entero.")
+                return
+            pais["poblacion"] = poblacion
+            pais["superficie"] = superficie
             print("País actualizado correctamente.")
             return
     print("País no encontrado.")

@@ -74,6 +74,7 @@ def actualizar_pais(paises):
                 return
             pais["poblacion"] = poblacion
             pais["superficie"] = superficie
+            guardar_paises(paises)
             print("País actualizado correctamente.")
             return
     print("País no encontrado.")

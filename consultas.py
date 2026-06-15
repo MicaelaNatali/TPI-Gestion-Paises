@@ -1,3 +1,5 @@
+from datos import guardar_paises
+
 def buscar_pais(paises):
     nombre = input ("Ingrese el nombre a buscar:"). lower()
     encontrados = []
@@ -12,30 +14,71 @@ def buscar_pais(paises):
 
 def filtrar_continente(paises):
     continente = input ("Ingrese continente:").lower()
+    encontrados = False
     for pais in paises:
             if pais ["continente"].lower() == continente:
                 print(pais)
+                encontrados = True
+    if not encontrados:
+        print("No se encontraron países en ese continente.")
 
 def filtrar_poblacion(paises):
-    minimo = int(input("Población mínima:"))
-    maximo = int(input("Población máxima:"))
+    try:
+        minimo = int(input("Población mínima:"))
+        maximo = int(input("Población máxima:"))
+    except ValueError:
+        print("Error: debe ingresar números enteros.")
+        return
+    encontrados = False
     for pais in paises:
+<<<<<<< HEAD
         if minimo <= int (pais["poblacion"]) <= maximo:
+=======
+        if minimo <= int(pais["poblacion"]) <= maximo:
+>>>>>>> 70dbc524fc1165bf59215b928108afe4609cca30
             print(pais)
+            encontrados = True
+    if not encontrados:
+        print("No se encontraron países en ese rango.")
 
 def filtrar_superficie(paises):
-    minimo = int(input("Superficie mínima:"))
-    maximo = int(input("Superficie máxima:"))
+    try:
+        minimo = int(input("Superficie mínima:"))
+        maximo = int(input("Superficie máxima:"))
+    except ValueError:
+        print("Error: debe ingresar números enteros.")
+        return
+    encontrados = False
     for pais in paises:
         if minimo <= int(pais ["superficie"]) <=maximo:
             print(pais)
+            encontrados = True
+    if not encontrados:
+        print("No se encontraron países en ese rango.")
 
 def actualizar_pais(paises):
     nombre = input("Ingrese el nombre del país a actualizar:"). lower()
     for pais in paises:
         if pais["nombre"].lower() == nombre:
-            pais["poblacion"] = int(input("Nueva población:"))
-            pais["superficie"] = int(input("Nueva superficie:"))
+            try:
+                poblacion = int(input("Nueva población:"))
+                if poblacion <= 0:
+                    print("Error: la población debe ser mayor a cero.")
+                    return
+            except ValueError:
+                print("Error: la población debe ser un número entero.")
+                return
+            try:
+                superficie = int(input("Nueva superficie:"))
+                if superficie <= 0:
+                    print("Error: la superficie debe ser mayor a cero.")
+                    return
+            except ValueError:
+                print("Error: la superficie debe ser un número entero.")
+                return
+            pais["poblacion"] = poblacion
+            pais["superficie"] = superficie
+            guardar_paises(paises)
             print("País actualizado correctamente.")
             return
     print("País no encontrado.")

@@ -90,3 +90,4 @@ Ambos integrantes participaron en la definición conjunta de la estructura de da
 
 Documentación PDF: 
 Video demostrativo:
+https://youtu.be/XDTUi6khpk0 

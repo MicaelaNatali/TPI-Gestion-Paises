@@ -20,14 +20,14 @@ def filtrar_poblacion(paises):
     minimo = int(input("Población mínima:"))
     maximo = int(input("Población máxima:"))
     for pais in paises:
-        if minimo <= pais["poblacion"] <= maximo:
+        if minimo <= int (pais["poblacion"]) <= maximo:
             print(pais)
 
 def filtrar_superficie(paises):
     minimo = int(input("Superficie mínima:"))
     maximo = int(input("Superficie máxima:"))
     for pais in paises:
-        if minimo <= pais ["superficie"] <=maximo:
+        if minimo <= int(pais ["superficie"]) <=maximo:
             print(pais)
 
 def actualizar_pais(paises):

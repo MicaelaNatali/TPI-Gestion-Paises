@@ -31,11 +31,7 @@ def filtrar_poblacion(paises):
         return
     encontrados = False
     for pais in paises:
-<<<<<<< HEAD
         if minimo <= int (pais["poblacion"]) <= maximo:
-=======
-        if minimo <= int(pais["poblacion"]) <= maximo:
->>>>>>> 70dbc524fc1165bf59215b928108afe4609cca30
             print(pais)
             encontrados = True
     if not encontrados:
